@@ -1,10 +1,8 @@
 #!/usr/bin/perl
 #
-# hws.pl - Splitter for Hatena Diary Writer.
+# hdws.pl - Splitter for Hatena Blog Writer.
 #
-# Copyright (C) 2004 by Hiroshi Yuki.
-# <hyuki@hyuki.com>
-# http://www.hyuki.com/techinfo/hatena_diary_writer.html
+# This program is forked from hws.pl (Splitter for Hatena Diary Writer, http://www.hyuki.com/techinfo/hatena_diary_writer.html).
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
@@ -45,12 +43,12 @@ my $md5_file = "md5.txt";
     # Process it.
     my ($date, $title) = ('', '');
     for (split(/\n/, $newfile)) {
-        if (/^(\d\d\d\d-\d\d-\d\d):(.*)/) {
+        if (/^(\d\d\d\d-\d\d-\d\d_\d\d):(.*)/) {
             ($date, $title) = ($1, $2);
             if ($diary{$date}) {
                 die "ERROR: Duplicate $date. ($title)\n";
             }
-            $diary{$date}->{content} = "$title\n";
+            $diary{$date}->{content} = "title: $title\n";
         } elsif ($date) {
             $diary{$date}->{content} .= "$_\n";
         } else {
