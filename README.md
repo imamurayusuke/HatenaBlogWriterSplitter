@@ -67,6 +67,6 @@ draft: no
 1. ``diary.txt``を別の名前に変更し``united.txt``を``diary.txt``にリネームする
 
 ## 履歴
+- 2019-01-28(v0.1.2): ``add_blog_header.pl``に代わって``hbw_uniter.pl``を提供開始
+- 2019-01-05(v0.1.1): ``add_blog_header.pl``を提供開始
 - 2019-01-03(v0.1.0): 公開
-- 2019-01-05(v0.1.0): ``add_blog_header.pl``を提供開始
-- 2019-01-28(v0.1.0): ``add_blog_header.pl``に代わって``hbw_uniter.pl``を提供開始
